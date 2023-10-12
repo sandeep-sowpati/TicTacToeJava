@@ -213,7 +213,7 @@ public class Game {
             return true;
         }
 
-        public Game Build() throws Exception {
+        public Game build() throws Exception {
             if(!valid()){
                 throw new Exception("Game class has some errors");
             }
