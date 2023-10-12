@@ -8,16 +8,16 @@ import java.util.List;
 
 public class EasyBotStrategy implements BotPlayingStrategy{
     @Override
-    public Cell makemove(Board board) {
-
+    public Cell makeMove(Board board) {
         // return the first empty cell.
-        for (List<Cell> row: board.getBoard()) {
+        for(List<Cell> row: board.getBoard()) {
             for (Cell cell: row) {
                 if (cell.getCellStatus().equals(CellStatus.EMPTY)) {
                     return cell;
                 }
             }
         }
+
         return null;
     }
 }

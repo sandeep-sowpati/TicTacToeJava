@@ -5,7 +5,7 @@ import org.example.entities.Cell;
 
 public class MediumBotStrategy implements BotPlayingStrategy{
     @Override
-    public Cell makemove(Board board) {
+    public Cell makeMove(Board board) {
         return null;
     }
 }

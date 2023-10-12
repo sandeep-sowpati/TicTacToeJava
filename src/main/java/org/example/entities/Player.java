@@ -8,7 +8,7 @@ public class Player {
     private PlayerType playerType;
     private Scanner scanner;
 
-    Player(String name, Character c, PlayerType playerType){
+    public Player(String name, Character c, PlayerType playerType){
         this.name = name;
         this.symbol = new Symbol(c);
         this.playerType = playerType;
@@ -38,12 +38,17 @@ public class Player {
         this.playerType = playerType;
     }
 
-    public Cell makemove(Board board){
+    public Cell makeMove(Board board){
         System.out.println("Please tell me the row you want to make the move: ");
         int row = scanner.nextInt();
         System.out.println("Please let me know the col you want to make the move: ");
         int col = scanner.nextInt();
 
         return new Cell(row,col);
+    }
+
+    @Override
+    public String toString() {
+        return this.name;
     }
 }

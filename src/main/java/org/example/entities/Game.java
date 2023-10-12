@@ -150,8 +150,8 @@ public class Game {
 
     public void makemove(){
         Player player = players.get(currentPlayerIndex);
-        System.out.println("This is "+ player.getSymbol() +"'s turn");
-        Cell proposedCell = player.makemove(board);
+        System.out.println("This is "+ player +"'s turn");
+        Cell proposedCell = player.makeMove(board);
         System.out.println("Move made at "+ proposedCell.getRow() +" row and "+ proposedCell.getCol()+ " col." );
         if(!validateMove(proposedCell)){
             System.out.println("Invalid Move please try again.");
@@ -196,7 +196,7 @@ public class Game {
 //          Single player can't possible
             if(this.players.size() < 2) return false;
 //          Number of players is not same as dimension
-            if(this.players.size() != this.dimension) return false;
+            if(this.players.size()+1 != this.dimension) return false;
 //          Number of bots count
             int botcount=0;
             for(Player player:players){
